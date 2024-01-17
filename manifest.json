@@ -6,5 +6,11 @@
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab", "tabs", "storage"],
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }
+  ]
 }
